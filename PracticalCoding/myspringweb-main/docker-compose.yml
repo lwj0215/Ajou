@@ -1,0 +1,17 @@
+services:
+  myweb:
+    image: leeuj/myweb:latest
+    container_name: myweb
+    ports: 
+      - "3000:3000"
+    environment:
+      SPRING_APPLICATION_NAME: MySpringWeb
+      SERVER_PORT: 3000
+      SPRING_JPA_HIBERNATE_DDL_AUTO: create
+      SPRING_JPA_SHOW_SQL: "true"
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.h2.Driver
+      SPRING_DATASOURCE_URL: jdbc:h2:mem:test
+      SPRING_DATASOURCE_USERNAME: sa
+      SPRING_DATASOURCE_PASSWORD: 
+      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.H2Dialect
+      
